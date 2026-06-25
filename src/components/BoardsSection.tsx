@@ -1,4 +1,4 @@
-import type { ReactNode, LegacyRef } from "react";
+import type { ReactNode } from "react";
 import { useDrop } from "react-dnd";
 
 type DragItem = {
@@ -23,7 +23,7 @@ export function BoardsSection(props: BoardsSectionProps) {
   });
   return (
     <div
-      ref={drop as unknown as LegacyRef<HTMLDivElement>}
+      ref={drop as unknown as React.RefObject<HTMLDivElement>}
       style={{
         flex: 1,
         minWidth: 0,
